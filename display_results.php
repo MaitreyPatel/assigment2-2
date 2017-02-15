@@ -22,7 +22,7 @@
         $error_message = 'Years must be a valid whole number.';
     } else if ( $years <= 0 ) {
         $error_message = 'Years must be greater than zero.';
-    } else if ( $years => 15 ) {
+    } else if ( $years > 15 ) {
         $error_message = 'Years must be less than or equal to 15.';
     // set error message to empty string if no invalid entries
     } else {
@@ -45,7 +45,7 @@
     $investment_f = '$'.number_format($investment, 2);
     $yearly_rate_f = $interest_rate.'%';
     $future_value_f = '$'.number_format($future_value, 2);
-    $date = ('m/d/y');
+    $date = date('m/d/y');
 ?>
 <!DOCTYPE html>
 <html>
